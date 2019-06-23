@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-![alt text](examples/grayscale.jpg "Grayscale") 
+![alt text](test_images/solidWhiteCurve.jpg "Original Image") 
 
 ---
 
