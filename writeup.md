@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
+![alt text](./examples/grayscale.jpg "Grayscale") 
 
 ---
 
@@ -38,25 +38,22 @@ My pipeline consists of 6 steps and an optional 7th steps.
   - Line Drawing
     - Draw detected road lines on empty image
 * Draw detected edges on original image
-First, I converted the images to grayscale, then I .... 
+* (optional) Draw clipping mask onto image in addition
+An example result can be seen in the following image:
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-[image1]: ./test_images_output/solidWhiteCurve.jpg
+![alt text](./test_images_output/solidWhiteCurve.jpg "Lane Lines on the Road") 
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+Potential shortcomings:
+1. The road lines are clipped in the polygon masking stage. 
+2. Sharp curves, e.g in construction sites, would would lead to insufficient line detection. In this case the two road lines might have positive (or negative) slope in image space at the same time. The mechanism that separates the lines by negative and positive slope would fail to distinguish between them properly  
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+Potential improvements:
+1. One could adaptively change the clipping polygon in each image frame by using the information of the linear model in the previous frame.
+2. To tackle this problem we need a more advanced procedure to separate the lines. A possible solution could be the application of clustering algorithms. Also a more complex fitting model could be chosen in order to account for bended road lines.
