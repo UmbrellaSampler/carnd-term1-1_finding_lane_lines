@@ -15,7 +15,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-![alt text](./examples/grayscale.jpg "Grayscale") 
+![alt text](examples/grayscale.jpg "Grayscale") 
 
 ---
 
@@ -41,7 +41,7 @@ My pipeline consists of 6 steps and an optional 7th steps.
 * (optional) Draw clipping mask onto image in addition
 An example result can be seen in the following image:
 
-![alt text](./test_images_output/solidWhiteCurve.jpg "Lane Lines on the Road") 
+![alt text](test_images_output/solidWhiteCurve.jpg "Lane Lines on the Road") 
 
 
 ### 2. Identify potential shortcomings with your current pipeline
